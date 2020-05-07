@@ -1,0 +1,12 @@
+{
+    "name": "starinc/kater_elevator",
+    "description": "The elevator of posts for Kater",
+    "homepage": "https://kater.me/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SuperSonic",
+            "email": "supersonic@livemail.tw"
+        }
+    ]
+}
