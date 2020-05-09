@@ -4,7 +4,7 @@
 
 ![logo](simple-logo.svg)
 
-## 論壇核心
+## 文章樓梯
 
 以 [MIT License](LICENSE) 發行程式原始碼
 
