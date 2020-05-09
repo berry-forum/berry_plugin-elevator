@@ -1,9 +1,4 @@
-/**
- *
- * @authors erx (erx@qq.com)
- * @date    2019-12-16 13:25:17
- * @version $Id$
- */
+/* (c) 2020 Star Inc.*/
 
 $(function () {
     function xyFloor() {
