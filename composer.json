@@ -1,6 +1,10 @@
 {
     "name": "starinc/kater_elevator",
     "description": "The elevator of posts for Kater.",
+    "type": "flarum-extension",
+    "keywords": [
+        "discussion"
+    ],
     "homepage": "https://kater.me/",
     "license": "MIT",
     "authors": [
@@ -9,9 +13,22 @@
             "email": "supersonic@livemail.tw"
         }
     ],
+    "require": {
+        "flarum/core": "^0.1.0-beta.13"
+    },
     "autoload": {
         "psr-4": {
             "KaterPlugins\\Elevator\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "文章電梯",
+            "icon": {
+                "name": "fas fa-fast-forward",
+                "backgroundColor": "#ffb5b5",
+                "color": "#ff0080"
+            }
         }
     }
 }
