@@ -94,9 +94,13 @@ module.exports =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/*jshint esversion: 6 */
+
 /* (c) 2020 Star Inc.*/
-$(function () {
-  function xyFloor() {
+function xyElevator() {}
+
+xyElevator.prototype = {
+  label: function label() {
     $('.Post-header .Avatar').each(function () {
       var $pi = $(this).parents(".PostStream-item"),
           fn = $pi.attr("data-number");
@@ -105,26 +109,8 @@ $(function () {
         $(this).after('<span class="xy-floor"><i>' + fn + '</i>樓</span>');
       }
     });
-  }
-
-  xyFloor();
-  setInterval(function () {
-    xyFloor();
-
-    if (!$(".DiscussionPage-nav .item-elevator").length) {
-      xyElevator();
-    }
-  }, 100);
-  $(window).scroll(function () {
-    xyFloor();
-  });
-  /*
-  $("body").on('mouseenter','*', function(){
-      xyElevator();
-  });
-  */
-
-  function xyElevator() {
+  },
+  input: function input() {
     var $e = $(".DiscussionPage-nav .item-elevator"),
         $s = $(".DiscussionPage-nav .item-scrubber");
 
@@ -133,7 +119,7 @@ $(function () {
       $(".DiscussionPage-nav").on('click', '.xy-fgo', function () {
         var $vin = $(this).parent().prev("button").children(".xygo-int"),
             xfn = $vin.val();
-        xyEjump(xfn, $vin);
+        this.move(xfn, $vin);
       });
     }
 
@@ -144,15 +130,12 @@ $(function () {
             n = i.value;
 
         if (e.keyCode == 13) {
-          xyEjump(n, i);
+          this.move(n, i);
         }
       };
     }
-  }
-
-  xyElevator();
-
-  function xyEjump(n, i) {
+  },
+  move: function move(n, i) {
     var lh = location.href,
         la = lh.split("/"),
         st = "";
@@ -167,10 +150,24 @@ $(function () {
         la.pop();
         st = la.join("/");
         location.href = st + '/' + n;
-      } else {//console.info("erx:error!");
       }
     }
   }
+};
+$(function () {
+  context = new xyElevator();
+  context.label();
+  setInterval(function () {
+    context.label();
+
+    if (!$(".DiscussionPage-nav .item-elevator").length) {
+      context.input();
+    }
+  }, 100);
+  $(window).scroll(function () {
+    context.label();
+  });
+  context.input();
 });
 
 /***/ })
