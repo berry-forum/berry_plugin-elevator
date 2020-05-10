@@ -7,8 +7,7 @@ import Discussion from 'flarum/models/Discussion';
 
 import ElevatorMenu from './ElevatorMenu';
 
-app.initializers.add('subscriptions', function () {
-  Discussion.prototype.elevator = Model.attribute('elevator');
-
-  ElevatorMenu();
+app.initializers.add('elevator', function () {
+    Discussion.prototype.elevator = Model.attribute('elevator');
+    ElevatorMenu();
 });
