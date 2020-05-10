@@ -16,10 +16,7 @@ export default class ElevatorMenu extends Dropdown {
               </button>
       
               <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
-                {this.options.map(props => {
-                  props.onclick = this.saveSubscription.bind(this, discussion, props.subscription);
-                  props.active = subscription === props.subscription;
-                })}
+                  TEST
               </ul>
             </div>
           );

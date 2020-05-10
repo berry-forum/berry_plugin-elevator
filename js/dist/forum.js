@@ -158,8 +158,6 @@ var ElevatorMenu = /*#__PURE__*/function (_Dropdown) {
   var _proto = ElevatorMenu.prototype;
 
   _proto.view = function view() {
-    var _this = this;
-
     return m("div", {
       className: "Dropdown ButtonGroup SubscriptionMenu"
     }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps), m("button", {
@@ -169,10 +167,7 @@ var ElevatorMenu = /*#__PURE__*/function (_Dropdown) {
       className: 'Button-icon'
     })), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
-    }, this.options.map(function (props) {
-      props.onclick = _this.saveSubscription.bind(_this, discussion, props.subscription);
-      props.active = subscription === props.subscription;
-    })));
+    }, "TEST"));
   };
 
   return ElevatorMenu;
