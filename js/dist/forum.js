@@ -157,29 +157,9 @@ var ElevatorMenu = /*#__PURE__*/function (_Dropdown) {
 
   var _proto = ElevatorMenu.prototype;
 
-  _proto.init = function init() {
-    this.options = [{
-      subscription: false,
-      icon: 'far fa-star',
-      label: app.translator.trans('starinc-kater_elevator.forum.sub_controls.not_following_button'),
-      description: app.translator.trans('starinc-kater_elevator.forum.sub_controls.not_following_text')
-    }];
-  };
-
   _proto.view = function view() {
     var _this = this;
 
-    var discussion = this.props.discussion;
-    var subscription = discussion.subscription();
-    var buttonLabel = app.translator.trans('starinc-kater_elevator.forum.sub_controls.follow_button');
-    var buttonIcon = 'far fa-star';
-    var buttonClass = 'SubscriptionMenu-button--' + subscription;
-    var buttonProps = {
-      className: 'Button SubscriptionMenu-button ' + buttonClass,
-      icon: buttonIcon,
-      children: buttonLabel,
-      title: title
-    };
     return m("div", {
       className: "Dropdown ButtonGroup SubscriptionMenu"
     }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps), m("button", {
@@ -193,13 +173,6 @@ var ElevatorMenu = /*#__PURE__*/function (_Dropdown) {
       props.onclick = _this.saveSubscription.bind(_this, discussion, props.subscription);
       props.active = subscription === props.subscription;
     })));
-  };
-
-  _proto.saveSubscription = function saveSubscription(discussion, subscription) {
-    discussion.save({
-      subscription: subscription
-    });
-    this.$('.SubscriptionMenu-button').tooltip('hide');
   };
 
   return ElevatorMenu;
