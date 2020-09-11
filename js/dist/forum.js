@@ -168,11 +168,15 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       className: "Button-icon"
     }), " Elevator"), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
-    }, m("input", {
+    }, m("div", null, m("input", {
       type: "text",
-      value: "\u8F38\u5165\u6A13\u5C64",
+      placeholder: "\u8F38\u5165\u6A13\u5C64",
       autocomplete: "off"
-    })));
+    }), m("button", {
+      title: "Discusses Elevator",
+      className: "Dropdown-toggle Button",
+      "data-toggle": "dropdown"
+    }, "Go "))));
   };
 
   _proto.activeElevator = function activeElevator(level) {
