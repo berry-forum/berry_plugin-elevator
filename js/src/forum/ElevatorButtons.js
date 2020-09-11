@@ -23,7 +23,7 @@ export default class ElevatorButtons extends Dropdown {
             <button
               title="Go"
               className="Button"
-              onclick={this.console(this)}
+              onclick={this.debug(this)}
             >
               {"Go "}
             </button>
