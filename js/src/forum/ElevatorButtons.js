@@ -19,7 +19,7 @@ export default class ElevatorButtons extends Dropdown {
         </button>
 
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
-          {inputBox}
+          inputBox
         </ul>
       </div>
     );

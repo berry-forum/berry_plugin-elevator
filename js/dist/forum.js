@@ -169,7 +169,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       className: "Button-icon"
     }), " Elevator"), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
-    }, inputBox));
+    }, "inputBox"));
   };
 
   _proto.activeElevator = function activeElevator(level) {
