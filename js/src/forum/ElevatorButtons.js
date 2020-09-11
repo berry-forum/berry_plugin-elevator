@@ -25,7 +25,11 @@ export default class ElevatorButtons extends Dropdown {
               placeholder="輸入樓層"
               autocomplete="off"
             />
-            <button title="Go" className="Button" onclick={this.activeElevator}>
+            <button
+              title="Go"
+              className="Button"
+              onclick={this.activeElevator(this)}
+            >
               {"Go "}
             </button>
           </div>
@@ -34,9 +38,11 @@ export default class ElevatorButtons extends Dropdown {
     );
   }
 
-  activeElevator(level) {
+  activeElevator(rootObj) {
     let target = "";
-    const data = this.props.discussion.data;
+    let level = 0;
+    console.log(rootObj);
+    const data = rootObj.props.discussion.data;
     if (level > 0) {
       const maxLevel = data.relationships.posts.length;
       if (level > maxLevel) target = maxLevel.toString();
