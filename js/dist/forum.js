@@ -173,9 +173,8 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       placeholder: "\u8F38\u5165\u6A13\u5C64",
       autocomplete: "off"
     }), m("button", {
-      title: "Discusses Elevator",
-      className: "Dropdown-toggle Button",
-      "data-toggle": "dropdown"
+      title: "Go",
+      className: "Button"
     }, "Go "))));
   };
 

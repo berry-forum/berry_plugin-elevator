@@ -20,11 +20,7 @@ export default class ElevatorButtons extends Dropdown {
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
           <div>
             <input type="text" placeholder="輸入樓層" autocomplete="off" />
-            <button
-              title="Discusses Elevator"
-              className="Dropdown-toggle Button"
-              data-toggle="dropdown"
-            >
+            <button title="Go" className="Button">
               {"Go "}
             </button>
           </div>
