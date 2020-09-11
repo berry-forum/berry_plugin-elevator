@@ -20,13 +20,21 @@ export default class ElevatorButtons extends Dropdown {
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
           <div>
             <input type="text" placeholder="輸入樓層" autocomplete="off" />
-            <button title="Go" className="Button">
+            <button
+              title="Go"
+              className="Button"
+              onclick={this.console(this)}
+            >
               {"Go "}
             </button>
           </div>
         </ul>
       </div>
     );
+  }
+
+  debug(data) {
+    console.log(data);
   }
 
   activeElevator(level) {

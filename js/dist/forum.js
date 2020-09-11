@@ -174,8 +174,13 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       autocomplete: "off"
     }), m("button", {
       title: "Go",
-      className: "Button"
+      className: "Button",
+      onclick: this.console(this)
     }, "Go "))));
+  };
+
+  _proto.debug = function debug(data) {
+    console.log(data);
   };
 
   _proto.activeElevator = function activeElevator(level) {
