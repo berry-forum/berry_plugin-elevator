@@ -159,7 +159,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
 
   _proto.view = function view() {
     var buttonProps = {
-      className: "Button SubscriptionMenu-button " + buttonClass,
+      className: "Button SubscriptionMenu-button ",
       icon: buttonIcon,
       children: buttonLabel,
       onclick: this.test,
@@ -168,7 +168,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     return m("div", {
       className: "Dropdown ButtonGroup SubscriptionMenu"
     }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps), m("button", {
-      className: "Dropdown-toggle Button Button--icon " + buttonClass,
+      className: "Dropdown-toggle Button Button--icon ",
       "data-toggle": "dropdown"
     }, flarum_helpers_icon__WEBPACK_IMPORTED_MODULE_3___default()("fas fa-caret-down", {
       className: "Button-icon"
@@ -208,7 +208,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-app.initializers.add("subscriptions", function () {
+app.initializers.add("elevator", function () {
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_DiscussionPage__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, "sidebarItems", function (items) {
     if (app.session.user) {
       var discussion = this.discussion;

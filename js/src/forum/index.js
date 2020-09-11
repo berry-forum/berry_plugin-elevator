@@ -6,7 +6,7 @@ import DiscussionPage from "flarum/components/DiscussionPage";
 
 import ElevatorButtons from "./ElevatorButtons";
 
-app.initializers.add("subscriptions", function () {
+app.initializers.add("elevator", function () {
   extend(DiscussionPage.prototype, "sidebarItems", function (items) {
     if (app.session.user) {
       const discussion = this.discussion;
