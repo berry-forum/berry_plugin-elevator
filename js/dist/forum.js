@@ -159,10 +159,9 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
 
   _proto.view = function view() {
     var buttonProps = {
-      className: "Dropdown-toggle Button Button--icon  ",
+      className: "Dropdown-toggle Button",
       icon: "fas fa-caret-down",
       children: "Elevator",
-      onclick: this.test,
       title: "Discusses Elevator"
     };
     return m("div", {
@@ -170,8 +169,11 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps));
   };
 
-  _proto.test = function test() {
-    alert("Test Message");
+  _proto.activeElevator = function activeElevator(level) {
+    var uriArray = location.href.split("/");
+    if (uriArray.length == 6) uriArray.pop();
+    if (level > 0) uriArray.push(level.toString());
+    location.href = uriArray.join("/");
   };
 
   return ElevatorButtons;

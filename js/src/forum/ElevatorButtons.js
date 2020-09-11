@@ -8,10 +8,9 @@ import icon from "flarum/helpers/icon";
 export default class ElevatorButtons extends Dropdown {
   view() {
     const buttonProps = {
-      className: "Dropdown-toggle Button Button--icon  ",
+      className: "Dropdown-toggle Button",
       icon: "fas fa-caret-down",
       children: "Elevator",
-      onclick: this.test,
       title: "Discusses Elevator",
     };
     return (
@@ -21,7 +20,10 @@ export default class ElevatorButtons extends Dropdown {
     );
   }
 
-  test() {
-    alert("Test Message");
+  activeElevator(level) {
+    let uriArray = location.href.split("/");
+    if (uriArray.length == 6) uriArray.pop();
+    if (level > 0) uriArray.push(level.toString());
+    location.href = uriArray.join("/");
   }
 }
