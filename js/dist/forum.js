@@ -176,7 +176,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }), m("button", {
       title: "Go",
       className: "Button",
-      onclick: this.activeElevator(this)
+      onclick: this.activeElevator.bind(this)
     }, "Go "))));
   };
 
@@ -191,7 +191,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       if (level > maxLevel) target = maxLevel.toString();else target = level.toString();
     }
 
-    location.href = "/" + data.id + "/" + target;
+    location.href = "/d/" + data.id + "/" + target;
   };
 
   return ElevatorButtons;

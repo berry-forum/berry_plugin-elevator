@@ -28,7 +28,7 @@ export default class ElevatorButtons extends Dropdown {
             <button
               title="Go"
               className="Button"
-              onclick={this.activeElevator(this)}
+              onclick={this.activeElevator.bind(this)}
             >
               {"Go "}
             </button>
@@ -48,6 +48,6 @@ export default class ElevatorButtons extends Dropdown {
       if (level > maxLevel) target = maxLevel.toString();
       else target = level.toString();
     }
-    location.href = `/${data.id}/${target}`;
+    location.href = `/d/${data.id}/${target}`;
   }
 }
