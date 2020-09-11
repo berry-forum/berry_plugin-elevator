@@ -20,16 +20,12 @@ export default class ElevatorButtons extends Dropdown {
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
           <div>
             <input
-              id="level"
+              id="elevator-level"
               type="text"
               placeholder="輸入樓層"
               autocomplete="off"
             />
-            <button
-              title="Go"
-              className="Button"
-              onclick={this.activeElevator.bind(this)}
-            >
+            <button title="Go" className="Button" onclick={this.activeElevator}>
               {"Go "}
             </button>
           </div>
@@ -38,11 +34,11 @@ export default class ElevatorButtons extends Dropdown {
     );
   }
 
-  activeElevator(rootObj) {
+  activeElevator() {
     let target = "";
-    let level = 0;
-    console.log(rootObj);
-    const data = rootObj.props.discussion.data;
+    let level = $("#elevator-level").val();
+    console.log(this);
+    const data = this.props.discussion.data;
     if (level > 0) {
       const maxLevel = data.relationships.posts.length;
       if (level > maxLevel) target = maxLevel.toString();
