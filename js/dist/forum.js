@@ -169,25 +169,27 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }), " Elevator"), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
     }, m("div", null, m("input", {
+      id: "level",
       type: "text",
       placeholder: "\u8F38\u5165\u6A13\u5C64",
       autocomplete: "off"
     }), m("button", {
       title: "Go",
       className: "Button",
-      onclick: this.debug(this)
+      onclick: this.activeElevator
     }, "Go "))));
   };
 
-  _proto.debug = function debug(data) {
-    console.log(data);
-  };
-
   _proto.activeElevator = function activeElevator(level) {
-    var uriArray = location.href.split("/");
-    if (uriArray.length == 6) uriArray.pop();
-    if (level > 0) uriArray.push(level.toString());
-    location.href = uriArray.join("/");
+    var target = "";
+    var data = this.props.discussion.data;
+
+    if (level > 0) {
+      var maxLevel = data.relationships.posts.length;
+      if (level > maxLevel) target = maxLevel.toString();else target = level.toString();
+    }
+
+    location.href = "/" + data.id + "/" + target;
   };
 
   return ElevatorButtons;

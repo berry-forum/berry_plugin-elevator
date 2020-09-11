@@ -19,12 +19,13 @@ export default class ElevatorButtons extends Dropdown {
 
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
           <div>
-            <input type="text" placeholder="輸入樓層" autocomplete="off" />
-            <button
-              title="Go"
-              className="Button"
-              onclick={this.debug(this)}
-            >
+            <input
+              id="level"
+              type="text"
+              placeholder="輸入樓層"
+              autocomplete="off"
+            />
+            <button title="Go" className="Button" onclick={this.activeElevator}>
               {"Go "}
             </button>
           </div>
@@ -33,14 +34,14 @@ export default class ElevatorButtons extends Dropdown {
     );
   }
 
-  debug(data) {
-    console.log(data);
-  }
-
   activeElevator(level) {
-    let uriArray = location.href.split("/");
-    if (uriArray.length == 6) uriArray.pop();
-    if (level > 0) uriArray.push(level.toString());
-    location.href = uriArray.join("/");
+    let target = "";
+    const data = this.props.discussion.data;
+    if (level > 0) {
+      const maxLevel = data.relationships.posts.length;
+      if (level > maxLevel) target = maxLevel.toString();
+      else target = level.toString();
+    }
+    location.href = `/${data.id}/${target}`;
   }
 }
