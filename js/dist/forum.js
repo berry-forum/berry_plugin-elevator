@@ -176,13 +176,15 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }), m("button", {
       title: "Go",
       className: "Button",
-      onclick: this.activeElevator
+      onclick: this.activeElevator(this)
     }, "Go "))));
   };
 
-  _proto.activeElevator = function activeElevator(level) {
+  _proto.activeElevator = function activeElevator(rootObj) {
     var target = "";
-    var data = this.props.discussion.data;
+    var level = 0;
+    console.log(rootObj);
+    var data = rootObj.props.discussion.data;
 
     if (level > 0) {
       var maxLevel = data.relationships.posts.length;
