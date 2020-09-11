@@ -2,7 +2,6 @@
 /* (c) 2020 Star Inc.*/
 
 import Dropdown from "flarum/components/Dropdown";
-import Button from "flarum/components/Button";
 import icon from "flarum/helpers/icon";
 
 export default class ElevatorButtons extends Dropdown {
@@ -41,7 +40,9 @@ export default class ElevatorButtons extends Dropdown {
 
   activeElevator(data) {
     let target = "";
-    let level = $("#elevator-level").val();
+    const strLevel = $("#elevator-level").val();
+    let level = parseInt(strLevel);
+    level--;
     if (level > 0) {
       const maxLevel = data.relationships.posts.length;
       if (level > maxLevel) target = maxLevel.toString();
