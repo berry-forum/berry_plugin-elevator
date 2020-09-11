@@ -1,13 +1,17 @@
 /*jshint esversion: 6 */
 /* (c) 2020 Star Inc.*/
 
-import app from 'flarum/app';
-import Model from 'flarum/Model';
-import Discussion from 'flarum/models/Discussion';
+import { extend } from "flarum/extend";
+import DiscussionPage from "flarum/components/DiscussionPage";
 
-import ElevatorMenu from './ElevatorMenu.js';
+import ElevatorButtons from "./ElevatorButtons";
 
-app.initializers.add('elevator', function () {
-    Discussion.prototype.elevator = Model.attribute('elevator');
-    ElevatorMenu();
+app.initializers.add("subscriptions", function () {
+  extend(DiscussionPage.prototype, "sidebarItems", function (items) {
+    if (app.session.user) {
+      const discussion = this.discussion;
+
+      items.add("elevator", ElevatorButtons.component({ discussion }));
+    }
+  });
 });
