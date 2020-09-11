@@ -7,15 +7,20 @@ import icon from "flarum/helpers/icon";
 
 export default class ElevatorButtons extends Dropdown {
   view() {
-    const buttonProps = {
-      className: "Dropdown-toggle Button",
-      icon: "fas fa-caret-down",
-      children: "Elevator",
-      title: "Discusses Elevator",
-    };
+    const inputBox = `<input type="text" value="輸入樓層" id="xygoInt" class="xygo-int" autocomplete="off" onfocus="if(value==defaultValue){value=\'\';}" onblur="if(!value){value=defaultValue;}">`;
     return (
       <div className="Dropdown ButtonGroup ElevatorMenu">
-        {Button.component(buttonProps)}
+        <button
+          title="Discusses Elevator"
+          className="Dropdown-toggle Button"
+          data-toggle="dropdown"
+        >
+          {icon("fas fa-caret-down", { className: "Button-icon" })} Elevator
+        </button>
+
+        <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
+          {inputBox}
+        </ul>
       </div>
     );
   }
