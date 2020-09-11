@@ -7,6 +7,7 @@ import icon from "flarum/helpers/icon";
 
 export default class ElevatorButtons extends Dropdown {
   view() {
+    const discussionData = this.props.discussion.data;
     return (
       <div className="Dropdown ButtonGroup ElevatorMenu">
         <button
@@ -25,7 +26,11 @@ export default class ElevatorButtons extends Dropdown {
               placeholder="輸入樓層"
               autocomplete="off"
             />
-            <button title="Go" className="Button" onclick={this.activeElevator}>
+            <button
+              title="Go"
+              className="Button"
+              onclick={this.activeElevator.bind(this, discussionData)}
+            >
               {"Go "}
             </button>
           </div>
@@ -34,11 +39,9 @@ export default class ElevatorButtons extends Dropdown {
     );
   }
 
-  activeElevator() {
+  activeElevator(data) {
     let target = "";
     let level = $("#elevator-level").val();
-    console.log(this);
-    const data = this.props.discussion.data;
     if (level > 0) {
       const maxLevel = data.relationships.posts.length;
       if (level > maxLevel) target = maxLevel.toString();
