@@ -159,11 +159,11 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
 
   _proto.view = function view() {
     var buttonProps = {
-      className: "Button SubscriptionMenu-button ",
-      icon: buttonIcon,
-      children: buttonLabel,
+      className: "Button-icon ",
+      icon: "fas fa-caret-down",
+      children: "Elevator",
       onclick: this.test,
-      title: title
+      title: "Discusses Elevator"
     };
     return m("div", {
       className: "Dropdown ButtonGroup SubscriptionMenu"
