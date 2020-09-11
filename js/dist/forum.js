@@ -175,7 +175,7 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }), m("button", {
       title: "Go",
       className: "Button",
-      onclick: this.console(this)
+      onclick: this.debug(this)
     }, "Go "))));
   };
 
