@@ -8,26 +8,15 @@ import icon from "flarum/helpers/icon";
 export default class ElevatorButtons extends Dropdown {
   view() {
     const buttonProps = {
-      className: "Button-icon ",
+      className: "Dropdown-toggle Button Button--icon  ",
       icon: "fas fa-caret-down",
       children: "Elevator",
       onclick: this.test,
       title: "Discusses Elevator",
     };
     return (
-      <div className="Dropdown ButtonGroup SubscriptionMenu">
+      <div className="Dropdown ButtonGroup ElevatorMenu">
         {Button.component(buttonProps)}
-
-        <button
-          className={"Dropdown-toggle Button Button--icon "}
-          data-toggle="dropdown"
-        >
-          {icon("fas fa-caret-down", { className: "Button-icon" })}
-        </button>
-
-        <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
-          TEST
-        </ul>
       </div>
     );
   }

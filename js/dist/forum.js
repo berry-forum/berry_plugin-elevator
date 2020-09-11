@@ -159,22 +159,15 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
 
   _proto.view = function view() {
     var buttonProps = {
-      className: "Button-icon ",
+      className: "Dropdown-toggle Button Button--icon  ",
       icon: "fas fa-caret-down",
       children: "Elevator",
       onclick: this.test,
       title: "Discusses Elevator"
     };
     return m("div", {
-      className: "Dropdown ButtonGroup SubscriptionMenu"
-    }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps), m("button", {
-      className: "Dropdown-toggle Button Button--icon ",
-      "data-toggle": "dropdown"
-    }, flarum_helpers_icon__WEBPACK_IMPORTED_MODULE_3___default()("fas fa-caret-down", {
-      className: "Button-icon"
-    })), m("ul", {
-      className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
-    }, "TEST"));
+      className: "Dropdown ButtonGroup ElevatorMenu"
+    }, flarum_components_Button__WEBPACK_IMPORTED_MODULE_2___default.a.component(buttonProps));
   };
 
   _proto.test = function test() {
