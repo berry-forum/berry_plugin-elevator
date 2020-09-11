@@ -169,22 +169,22 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
     }), " Elevator"), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
     }, m("div", null, m("input", {
-      id: "level",
+      id: "elevator-level",
       type: "text",
       placeholder: "\u8F38\u5165\u6A13\u5C64",
       autocomplete: "off"
     }), m("button", {
       title: "Go",
       className: "Button",
-      onclick: this.activeElevator.bind(this)
+      onclick: this.activeElevator
     }, "Go "))));
   };
 
-  _proto.activeElevator = function activeElevator(rootObj) {
+  _proto.activeElevator = function activeElevator() {
     var target = "";
-    var level = 0;
-    console.log(rootObj);
-    var data = rootObj.props.discussion.data;
+    var level = $("#elevator-level").val();
+    console.log(this);
+    var data = this.props.discussion.data;
 
     if (level > 0) {
       var maxLevel = data.relationships.posts.length;
