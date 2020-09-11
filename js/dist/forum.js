@@ -158,7 +158,6 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
   var _proto = ElevatorButtons.prototype;
 
   _proto.view = function view() {
-    var inputBox = "<input type=\"text\" value=\"\u8F38\u5165\u6A13\u5C64\" id=\"xygoInt\" class=\"xygo-int\" autocomplete=\"off\" onfocus=\"if(value==defaultValue){value='';}\" onblur=\"if(!value){value=defaultValue;}\">";
     return m("div", {
       className: "Dropdown ButtonGroup ElevatorMenu"
     }, m("button", {
@@ -169,7 +168,11 @@ var ElevatorButtons = /*#__PURE__*/function (_Dropdown) {
       className: "Button-icon"
     }), " Elevator"), m("ul", {
       className: "Dropdown-menu dropdown-menu Dropdown-menu--right"
-    }, "inputBox"));
+    }, m("input", {
+      type: "text",
+      value: "\u8F38\u5165\u6A13\u5C64",
+      autocomplete: "off"
+    })));
   };
 
   _proto.activeElevator = function activeElevator(level) {
