@@ -48,6 +48,6 @@ export default class ElevatorButtons extends Dropdown {
       if (level > maxLevel) target = maxLevel.toString();
       else target = level.toString();
     }
-    location.href = `/d/${data.id}/${target}`;
+    location.replace(`/d/${data.id}/${target}`);
   }
 }
