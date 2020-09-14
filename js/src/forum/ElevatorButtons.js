@@ -7,6 +7,12 @@ import icon from "flarum/helpers/icon";
 export default class ElevatorButtons extends Dropdown {
   view() {
     const discussionData = this.props.discussion.data;
+    const inputButtonLabel = app.translator.trans(
+      "kater_elevator.forum.sub_controls.elevator_button"
+    );
+    const inputPlaceholderLabel = app.translator.trans(
+      "kater_elevator.forum.sub_controls.level_input"
+    );
     return (
       <div className="Dropdown ButtonGroup ElevatorMenu">
         <button
@@ -14,7 +20,8 @@ export default class ElevatorButtons extends Dropdown {
           className="Dropdown-toggle Button"
           data-toggle="dropdown"
         >
-          {icon("fas fa-caret-down", { className: "Button-icon" })} Elevator
+          {icon("fas fa-caret-down", { className: "Button-icon" })}{" "}
+          {inputButtonLabel}
         </button>
 
         <ul className="Dropdown-menu dropdown-menu Dropdown-menu--right">
@@ -22,7 +29,7 @@ export default class ElevatorButtons extends Dropdown {
             <input
               id="elevator-level"
               type="text"
-              placeholder="輸入樓層"
+              placeholder={inputPlaceholderLabel}
               autocomplete="off"
             />
             <button
@@ -30,7 +37,7 @@ export default class ElevatorButtons extends Dropdown {
               className="Button"
               onclick={this.activeElevator.bind(this, discussionData)}
             >
-              {"Go "}
+              {"Go"}
             </button>
           </div>
         </ul>

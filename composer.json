@@ -23,7 +23,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "文章電梯",
+            "title": "Kater Discusses Elevator",
             "icon": {
                 "name": "fas fa-fast-forward",
                 "backgroundColor": "#ffb5b5",

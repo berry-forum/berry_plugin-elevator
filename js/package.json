@@ -2,7 +2,6 @@
   "private": true,
   "name": "@star-inc/kater_elevator",
   "dependencies": {
-    "jquery": "^3.5.1",
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
