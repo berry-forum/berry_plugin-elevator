@@ -8,10 +8,10 @@ export default class ElevatorButtons extends Dropdown {
   view() {
     const discussionData = this.props.discussion.data;
     const inputButtonLabel = app.translator.trans(
-      "starinc-kater_elevator.forum.sub_controls.elevator_button"
+      "starinc-nex_elevator.forum.sub_controls.elevator_button"
     );
     const inputPlaceholderLabel = app.translator.trans(
-      "starinc-kater_elevator.forum.sub_controls.level_input"
+      "starinc-nex_elevator.forum.sub_controls.level_input"
     );
     return (
       <div className="Dropdown ButtonGroup ElevatorMenu">
