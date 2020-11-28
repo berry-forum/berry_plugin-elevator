@@ -4,7 +4,7 @@
 import Dropdown from "flarum/components/Dropdown";
 import icon from "flarum/helpers/icon";
 
-export default class ElevatorButtons extends Dropdown {
+export default class ElevatorButton extends Dropdown {
   view() {
     const discussionData = this.props.discussion.data;
     const inputButtonLabel = app.translator.trans(

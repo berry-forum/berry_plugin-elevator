@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+/* (c) 2020 Star Inc.*/
+
 import { extend } from 'flarum/extend';
 import CommentPost from 'flarum/components/CommentPost';
 
