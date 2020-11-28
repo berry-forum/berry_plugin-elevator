@@ -144,11 +144,10 @@ __webpack_require__.r(__webpack_exports__);
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_CommentPost__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'headerItems', function (items) {
     var post = this.props.post;
     var level = post.data.attributes.number;
+    console.log(post, level);
     items.add('level', m("div", {
       className: "ElevatorLevel"
-    }, {
-      level: level
-    }));
+    }, level));
   });
 });
 
