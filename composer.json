@@ -1,11 +1,11 @@
 {
-    "name": "starinc/kater_elevator",
-    "description": "The elevator of posts for Kater.",
+    "name": "starinc/nex_elevator",
+    "description": "The elevator of posts for Nex.",
     "type": "flarum-extension",
     "keywords": [
         "discussion"
     ],
-    "homepage": "https://kater.me/",
+    "homepage": "https://nex.starinc.xyz/",
     "license": "MIT",
     "authors": [
         {
@@ -23,11 +23,11 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Kater Discusses Elevator",
+            "title": "Nex Discusses Elevator",
             "icon": {
                 "name": "fas fa-fast-forward",
-                "backgroundColor": "#ffb5b5",
-                "color": "#ff0080"
+                "backgroundColor": "#3569ff",
+                "color": "#fff"
             }
         }
     }
