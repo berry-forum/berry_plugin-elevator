@@ -8,6 +8,6 @@ export default function () {
     extend(CommentPost.prototype, 'headerItems', function (items) {
         const post = this.props.post;
         const level = post.data.attributes.number;
-        items.add('level', <div className="ElevatorLevel">{{level}}</div>);
+        items.add('level', <div className="ElevatorLevel">{ level }</div>);
     });
 }
