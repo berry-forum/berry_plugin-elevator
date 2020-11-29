@@ -1,10 +1,13 @@
-# Kater
+# Nex
 
-身受許多年輕族群喜愛的匿名社群平台，立志於成為全台灣最多元、開放的社群平台！
+全方位的『超』自由論壇
+> 為壓力大想找人抒發，或者心中有小宇宙想找人分享的你
+>
+> 提供最棒的多元交流平台
 
-![logo](simple-logo.svg)
+![logo](nex.png)
 
-## 文章樓梯
+## 文章電梯
 
 以 [MIT License](LICENSE) 發行程式原始碼
 
@@ -16,4 +19,4 @@
 
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-> (c) 2020 [Star Inc.](https://starinc.xyz) with [Kater Team](https://kater.me).
+> (c) 2020 [Star Inc.](https://starinc.xyz).
