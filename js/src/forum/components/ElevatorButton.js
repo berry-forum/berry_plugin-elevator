@@ -20,7 +20,7 @@ export default class ElevatorButton extends Dropdown {
           className="Dropdown-toggle Button"
           data-toggle="dropdown"
         >
-          {icon("fas fa-caret-down", { className: "Button-icon" })}{" "}
+          {icon("fas fa-arrows-alt-v", { className: "Button-icon" })}{" "}
           {inputButtonLabel}
         </button>
 

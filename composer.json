@@ -25,7 +25,7 @@
         "flarum-extension": {
             "title": "Nex Discusses Elevator",
             "icon": {
-                "name": "fas fa-fast-forward",
+                "name": "fas fa-arrows-alt-v",
                 "backgroundColor": "#3569ff",
                 "color": "#fff"
             }
